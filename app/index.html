@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Atlas — GTA VI Trophy Guide</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <p class="kicker">GRAND THEFT AUTO VI · PLAYSTATION 5 · 55 TROPHIES</p>
+      <h1>Leonida Trophy Atlas</h1>
+      <p class="tagline">Every trophy, every step cited. One playthrough, about 200 hours, zero guesswork passed off as fact.</p>
+    </div>
+    <div class="progress-card">
+      <p class="big-progress"><span id="earned-count">0</span><span class="of"> / 55 earned</span></p>
+      <div class="bar"><div id="progress-fill" class="fill" style="width:0%"></div></div>
+      <p id="grade-counts" class="grade-counts"></p>
+      <p id="points-line" class="points-line"></p>
+    </div>
+  </div>
+</header>
+
+<section class="audit" id="audit" aria-label="Data check"></section>
+
+<nav class="tabs" aria-label="Views">
+  <a href="#tracker" data-view="tracker">Tracker</a>
+  <a href="#roadmap" data-view="roadmap">Roadmap</a>
+  <a href="#missables" data-view="missables">Missables</a>
+  <a href="#sources" data-view="sources">Sources</a>
+  <span class="nav-spacer"></span>
+  <label class="shield"><input type="checkbox" id="spoiler" checked> Spoiler shield</label>
+  <button id="export-btn" type="button">Export</button>
+  <label class="import-btn">Import <input id="import-file" type="file" accept="application/json,.json"></label>
+  <span class="saved-note">✓ Saved in this browser</span>
+</nav>
+
+<main>
+  <section id="view-tracker" class="view">
+    <div class="filters" id="filters"></div>
+    <div class="tracker-grid">
+      <div class="list-col">
+        <p class="shown-line"><span id="shown-count"></span> <span class="sort-wrap">Sort <select id="sort"><option value="roadmap">Roadmap order</option><option value="name">Name A–Z</option><option value="grade">Grade</option></select></span></p>
+        <ul id="trophy-list" class="trophy-list"></ul>
+      </div>
+      <article id="detail" class="detail" aria-live="polite"></article>
+      <aside class="nextup">
+        <h2>Next up · roadmap order</h2>
+        <ol id="nextup-list"></ol>
+        <h2>Story progress by chapter</h2>
+        <div id="chapter-bars"></div>
+        <p class="footnote">Mission chapters are this guide's reading of the story order.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section id="view-roadmap" class="view" hidden>
+    <h2 class="view-title">Roadmap to the platinum</h2>
+    <p class="view-intro">Nine phases in play order. Do phase 1's balcony meditation before Chapter 1 ends; everything else can wait for free roam.</p>
+    <div id="roadmap-phases"></div>
+  </section>
+
+  <section id="view-missables" class="view" hidden>
+    <h2 class="view-title">Missables &amp; at-risk trophies</h2>
+    <p class="view-intro">Only one trophy is flagged possibly missable by the guides we checked. The rest below are unconfirmed — treat them as at-risk until a guide verifies the method.</p>
+    <div id="missables-list"></div>
+  </section>
+
+  <section id="view-sources" class="view" hidden>
+    <h2 class="view-title">Sources</h2>
+    <p class="view-intro">Every guide step cites a numbered source. Names, descriptions and grades are the official PSN list (18 Nov 2026); all guide text is our own words.</p>
+    <ol id="sources-list" class="sources-list"></ol>
+  </section>
+</main>
+
+<footer>
+  <p>Leonida Trophy Atlas — an unofficial fan guide. Not affiliated with Rockstar Games. Trophy names, descriptions and grades are the official PlayStation list; all guide text is written in our own words.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
